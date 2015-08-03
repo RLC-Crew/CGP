@@ -3,8 +3,12 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - CGP WinWebSite</title>
     @Styles.Render("~/Content/css")
+
+    <link href="../../Content/themes/base/jquery.ui.core.css" rel="stylesheet" type="text/css" />
+    <link href="../../Content/themes/base/jquery.ui.menu.css" rel="stylesheet" type="text/css" />
+
     @Scripts.Render("~/bundles/modernizr")
 
 </head>
@@ -20,11 +24,12 @@
                 @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
+                @*<ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
+                </ul>*@
+                @Html.Action("Menu", "Home")
                 @Html.Partial("_LoginPartial")
             </div>
         </div>
@@ -33,12 +38,20 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p>&copy; @DateTime.Now.Year - CGP WinWebSite</p>
         </footer>
     </div>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/jqueryui")
+
+    <script>
+        $(document).ready(function () {
+        $("#menu").menu();
+        });
+    </script>
+
     @RenderSection("scripts", required: false)
 </body>
 </html>

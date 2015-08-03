@@ -9,6 +9,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using CGP.Models;
+using System.Collections.Generic;
 
 namespace CGP.Controllers
 {
@@ -68,27 +69,61 @@ namespace CGP.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Login(LoginViewModel model, string returnUrl)
         {
-            if (!ModelState.IsValid)
-            {
-                return View(model);
-            }
+            //if (!ModelState.IsValid)
+            //{
+            //    return View(model);
+            //}
 
             // This doesn't count login failures towards account lockout
             // To enable password failures to trigger account lockout, change to shouldLockout: true
-            var result = await SignInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, shouldLockout: false);
-            switch (result)
+            //var result = await SignInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, shouldLockout: false);
+            //var result = SignInStatus.Success;
+            //switch (result)
+            //{
+            //    case SignInStatus.Success:
+            //        SignInAsync();
+            //        return RedirectToLocal(returnUrl);
+            //    case SignInStatus.LockedOut:
+            //        return View("Lockout");
+            //    case SignInStatus.RequiresVerification:
+            //        return RedirectToAction("SendCode", new { ReturnUrl = returnUrl, RememberMe = model.RememberMe });
+            //    case SignInStatus.Failure:
+            //    default:
+            //        ModelState.AddModelError("", "Invalid login attempt.");
+            //        return View(model);
+            //}
+
+            if (ModelState.IsValid)
             {
-                case SignInStatus.Success:
-                    return RedirectToLocal(returnUrl);
-                case SignInStatus.LockedOut:
-                    return View("Lockout");
-                case SignInStatus.RequiresVerification:
-                    return RedirectToAction("SendCode", new { ReturnUrl = returnUrl, RememberMe = model.RememberMe });
-                case SignInStatus.Failure:
-                default:
-                    ModelState.AddModelError("", "Invalid login attempt.");
-                    return View(model);
+                //var identity = new ClaimsIdentity(new[] {
+                //            new Claim(ClaimTypes.Name, model.Email),
+                //        },
+                //    DefaultAuthenticationTypes.ApplicationCookie,
+                //    ClaimTypes.Name, ClaimTypes.Role);
+
+                //// if you want roles, just add as many as you want here (for loop maybe?)
+                //identity.AddClaim(new Claim(ClaimTypes.Role, "guest"));
+                //// tell OWIN the identity provider, optional
+                //// identity.AddClaim(new Claim(IdentityProvider, "Simplest Auth"));
+
+                //AuthenticationManager.SignIn(new AuthenticationProperties
+                //    {
+                //        IsPersistent = false
+                //    }, identity);
+                var claims = new List<Claim>();
+                claims.Add(new Claim(ClaimTypes.Name,model.Email));
+                claims.Add(new Claim(ClaimTypes.Email, model.Email));
+                var id = new ClaimsIdentity(claims,
+                                            DefaultAuthenticationTypes.ApplicationCookie);
+
+                var ctx = Request.GetOwinContext();
+                var authenticationManager = ctx.Authentication;
+                authenticationManager.SignIn(id);
+
+                return RedirectToLocal(returnUrl);
             }
+
+            return View(model);
         }
 
         //
