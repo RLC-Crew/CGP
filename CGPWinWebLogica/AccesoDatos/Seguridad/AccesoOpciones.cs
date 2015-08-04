@@ -14,7 +14,7 @@ namespace CGPWinWebLogica.AccesoDatos.Seguridad
         {
             try
             {
-                Dat_Opciones acceso = new Dat_Opciones();
+                Dat_Opciones acceso = new Dat_Opciones(); 
                 int opcionPadre = codigoOpcionPadre.HasValue ? codigoOpcionPadre.Value : 0;
                 DataSet datos = acceso.TraerListaPorOpcPadreBD(codigoSistema, codigoModulo, opcionPadre,0);
                 List<Opcion> lista = null;
