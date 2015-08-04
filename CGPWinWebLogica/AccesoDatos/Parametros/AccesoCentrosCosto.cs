@@ -7,7 +7,6 @@ using System.Data;
 using System.ComponentModel;
 using CGPWinWebLogica.Entidades.Parametros;
 using CGPWinWebLogica.Entidades.Enums;
-using Prosoft.WebControls_Library;
 using CGPWinWebLogica.Entidades.Seguridad;
 
 namespace CGPWinWebLogica.AccesoDatos.Parametros
@@ -64,11 +63,7 @@ namespace CGPWinWebLogica.AccesoDatos.Parametros
                         centros.Add(nuevoCentro);
                     }
                 }
-                if (centros != null)
-                {
-                    DataUtil<CentroCosto> helper = new DataUtil<CentroCosto>();
-                    return helper.Sort(centros, sortExpression);
-                }
+                
                 return centros;
             }
             catch (Exception)

@@ -8,7 +8,6 @@ using CGP.Seguridad.UsrSeguridad.Dat_Departamentos;
 using System.Data;
 using CGPWinWebLogica.Entidades.Enums;
 using System.ComponentModel;
-using Prosoft.WebControls_Library;
 
 
 namespace CGPWinWebLogica.AccesoDatos.Seguridad
@@ -59,11 +58,7 @@ namespace CGPWinWebLogica.AccesoDatos.Seguridad
                         departamentos.Add(dep);
                     }
                 }
-                if (departamentos != null)
-                {
-                    DataUtil<Departamento> helper = new DataUtil<Departamento>();
-                    return helper.Sort(departamentos, sortExpression);
-                }
+                
                 return departamentos;
             }
             catch (Exception)

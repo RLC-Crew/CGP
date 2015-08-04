@@ -7,7 +7,6 @@ using CGP.UsrPagos.Dat_PC_Transacciones;
 using System.Data;
 using CGPWinWebLogica.Entidades.Enums;
 using System.ComponentModel;
-using Prosoft.WebControls_Library;
 using CGP.UsrPagos.DAT_TFI;
 using CGPWinWebLogica.Entidades.Seguridad;
 using CGP.UsrPagos.Dat_PC_InformacionAdicional;
@@ -65,15 +64,10 @@ namespace CGPWinWebLogica.AccesoDatos.Transacciones
                     tran.IdCanal = int.Parse(row["ID_Canal"].ToString());
                     transacciones.Add(tran);
                 }
-                if (transacciones == null)
-                {
+               
                     return transacciones;
-                }
-                else
-                {
-                    DataUtil<Transaccion> helper = new DataUtil<Transaccion>();
-                    return helper.Sort(transacciones, sortExpression);
-                }
+                
+               
             }
             catch (Exception)
             {
@@ -145,15 +139,9 @@ namespace CGPWinWebLogica.AccesoDatos.Transacciones
                   //  tran.IdCanal = int.Parse(row["ID_Canal"].ToString());
                     transacciones.Add(tran);
                 }
-                if (transacciones == null)
-                {
+               
                     return transacciones;
-                }
-                else
-                {
-                    DataUtil<Transaccion> helper = new DataUtil<Transaccion>();
-                    return helper.Sort(transacciones, sortExpression);
-                }
+                
             
             }
             catch (Exception)

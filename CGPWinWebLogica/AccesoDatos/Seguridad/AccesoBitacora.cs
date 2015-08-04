@@ -6,7 +6,6 @@ using CGPWinWebLogica.Entidades.Seguridad;
 using System.Data;
 using CGPWinWebLogica.Entidades.Enums;
 using System.ComponentModel;
-using Prosoft.WebControls_Library;
 
 namespace CGPWinWebLogica.AccesoDatos.Seguridad
 {
@@ -43,11 +42,7 @@ namespace CGPWinWebLogica.AccesoDatos.Seguridad
                         bitacora.Add(obj);
                     }
                 }
-                if (bitacora != null)
-                {
-                    DataUtil<LineaBitacora> helper = new DataUtil<LineaBitacora>();
-                    return helper.Sort(bitacora, sortExpression);
-                }
+              
                 return bitacora;
             }
             catch (Exception)
@@ -86,11 +81,7 @@ namespace CGPWinWebLogica.AccesoDatos.Seguridad
                         bitacora.Add(obj);
                     }
                 }
-                if (bitacora != null)
-                {
-                    DataUtil<LineaBitacoraSeguridad> helper = new DataUtil<LineaBitacoraSeguridad>();
-                    return helper.Sort(bitacora, sortExpression);
-                }
+               
                 return bitacora;
             }
             catch (Exception)

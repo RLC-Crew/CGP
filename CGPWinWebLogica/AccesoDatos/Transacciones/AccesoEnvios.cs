@@ -7,7 +7,6 @@ using CGP.UsrPagos.Dat_PC_Envios;
 using System.Data;
 using CGPWinWebLogica.Entidades.Enums;
 using System.ComponentModel;
-using Prosoft.WebControls_Library;
 using CGPWinWebLogica.Entidades.Seguridad;
 
 namespace CGPWinWebLogica.AccesoDatos.Transacciones
@@ -236,14 +235,9 @@ namespace CGPWinWebLogica.AccesoDatos.Transacciones
                         envios.Add(envi);
                     }
                 }
-                if (envios == null)
-                {
+               
                     return envios;
-                }
-                else {
-                    DataUtil<Envio> helper = new DataUtil<Envio>();
-                    return helper.Sort(envios, sortExpression);    
-                }
+               
                 
             }
             catch (Exception e)
@@ -290,15 +284,9 @@ namespace CGPWinWebLogica.AccesoDatos.Transacciones
                         envios.Add(envi);
                     }
                 }
-                if (envios == null)
-                {
+              
                     return envios;
-                }
-                else
-                {
-                    DataUtil<Envio> helper = new DataUtil<Envio>();
-                    return helper.Sort(envios, sortExpression);
-                }
+              
 
             }
             catch (Exception)

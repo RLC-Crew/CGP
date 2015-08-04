@@ -5,7 +5,6 @@ using System.Text;
 using System.ComponentModel;
 using CGPWinWebLogica.Entidades.Parametros;
 using System.Data;
-using Prosoft.WebControls_Library;
 using CGPWinWebLogica.Entidades.Seguridad;
 
 namespace CGPWinWebLogica.AccesoDatos.Parametros
@@ -35,11 +34,7 @@ namespace CGPWinWebLogica.AccesoDatos.Parametros
                         });
                     }
                 }
-                if (canales != null)
-                {
-                    DataUtil<Canal> helper = new DataUtil<Canal>();
-                    return helper.Sort(canales, sortExpression);
-                }
+               
                 return canales;
             }
             catch (Exception)

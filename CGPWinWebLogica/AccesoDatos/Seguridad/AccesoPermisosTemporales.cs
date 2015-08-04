@@ -6,7 +6,6 @@ using CGPWinWebLogica.Entidades.Seguridad;
 using System.Data;
 using CGPWinWebLogica.Entidades.Enums;
 using System.ComponentModel;
-using Prosoft.WebControls_Library;
 using CGP.Seguridad.UsrSeguridad.Dat_PermisosTemporales;
 
 namespace CGPWinWebLogica.AccesoDatos.Seguridad
@@ -39,11 +38,7 @@ namespace CGPWinWebLogica.AccesoDatos.Seguridad
                         lista.Add(obj);
                     }
                 }
-                if (lista != null)
-                {
-                    DataUtil<PermisoTemporal> helper = new DataUtil<PermisoTemporal>();
-                    return helper.Sort(lista, sortExpression);
-                }
+               
                 return lista;
             }
             catch (Exception)

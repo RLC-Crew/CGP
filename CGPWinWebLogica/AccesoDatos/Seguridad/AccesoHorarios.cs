@@ -7,7 +7,6 @@ using CGP.Seguridad.UsrSeguridad.Dat_Horariosasmx;
 using System.Data;
 using CGPWinWebLogica.Entidades.Enums;
 using System.ComponentModel;
-using Prosoft.WebControls_Library;
 
 namespace CGPWinWebLogica.AccesoDatos.Seguridad
 {
@@ -58,11 +57,7 @@ namespace CGPWinWebLogica.AccesoDatos.Seguridad
                         lista.Add(obj);
                     }
                 }
-                if (lista != null)
-                {
-                    DataUtil<Horario> helper = new DataUtil<Horario>();
-                    return helper.Sort(lista, sortExpression);
-                }
+               
                 return lista;
             }
             catch (Exception)

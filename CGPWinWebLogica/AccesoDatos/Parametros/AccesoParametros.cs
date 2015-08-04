@@ -6,7 +6,6 @@ using CGP.UsrPagos.Dat_PC_Parametros;
 using System.ComponentModel;
 using CGPWinWebLogica.Entidades.Parametros;
 using System.Data;
-using Prosoft.WebControls_Library;
 using CGPWinWebLogica.Entidades.Seguridad;
 
 namespace CGPWinWebLogica.AccesoDatos.Parametros
@@ -41,11 +40,7 @@ namespace CGPWinWebLogica.AccesoDatos.Parametros
                         parametros.Add(nuevoParametro);
                     }
                 }
-                if (parametros != null)
-                {
-                    DataUtil<Parametro> helper = new DataUtil<Parametro>();
-                    return helper.Sort(parametros, sortExpression);
-                }
+               
                 return parametros;
             }
             catch (Exception)

@@ -6,7 +6,6 @@ using CGPWinWebLogica.Entidades.Transacciones;
 using System.Data;
 using CGPWinWebLogica.Entidades.Enums;
 using System.ComponentModel;
-using Prosoft.WebControls_Library;
 using CGP.UsrPagos.Dat_Liquidaciones;
 using CGPWinWebLogica.Entidades.Seguridad;
 

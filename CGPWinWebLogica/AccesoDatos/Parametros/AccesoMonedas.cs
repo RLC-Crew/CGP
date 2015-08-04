@@ -3,7 +3,6 @@ using CGP.UsrPagos.Dat_PC_Monedas;
 using System.Data;
 using CGPWinWebLogica.Entidades.Parametros;
 using System.Collections.Generic;
-using Prosoft.WebControls_Library;
 using System;
 using CGPWinWebLogica.Entidades.Enums;
 using CGPWinWebLogica.Entidades.Seguridad;
@@ -58,11 +57,7 @@ namespace CGPWinWebLogica.AccesoDatos.Parametros
                         monedas.Add(nuevaMoneda);
                     }
                 }
-                if (monedas != null)
-                {
-                    DataUtil<Moneda> helper = new DataUtil<Moneda>();
-                    return helper.Sort(monedas, sortExpression);
-                }
+               
                 return monedas;
             }
             catch (Exception)

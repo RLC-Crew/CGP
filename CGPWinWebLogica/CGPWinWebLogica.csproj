@@ -61,10 +61,6 @@
     <Reference Include="ObjetosBase">
       <HintPath>..\DLLContiner\CGPWinWebLogica\ObjetosBase.dll</HintPath>
     </Reference>
-    <Reference Include="Prosoft.WebControls_Library, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\DLLContiner\CGPWinWebLogica\Prosoft.WebControls_Library.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core">

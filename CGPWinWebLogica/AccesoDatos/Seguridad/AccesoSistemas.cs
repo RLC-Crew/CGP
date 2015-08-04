@@ -6,7 +6,6 @@ using CGPWinWebLogica.Entidades.Seguridad;
 using System.Data;
 using CGPWinWebLogica.Entidades.Enums;
 using System.ComponentModel;
-using Prosoft.WebControls_Library;
 using CGP.Seguridad.UsrSeguridad.Dat_Sistemas;
 
 namespace CGPWinWebLogica.AccesoDatos.Seguridad
@@ -20,11 +19,7 @@ namespace CGPWinWebLogica.AccesoDatos.Seguridad
             try
             {
                 List<Sistema> lista = ListarSistemas();
-                if (lista != null)
-                {
-                    DataUtil<Sistema> helper = new DataUtil<Sistema>();
-                    return helper.Sort(lista, sortExpression);
-                }
+               
                 return lista;
             }
             catch (Exception)

@@ -7,7 +7,6 @@ using CGP.UsrPagos.Dat_PC_Motivos;
 using System.Data;
 using CGPWinWebLogica.Entidades.Parametros;
 using CGPWinWebLogica.Entidades.Enums;
-using Prosoft.WebControls_Library;
 using CGPWinWebLogica.Entidades.Seguridad;
 
 namespace CGPWinWebLogica.AccesoDatos.Parametros
@@ -59,11 +58,7 @@ namespace CGPWinWebLogica.AccesoDatos.Parametros
                         motivos.Add(nuevoMotivo);
                     }
                 }
-                if (motivos != null)
-                {
-                    DataUtil<Motivo> helper = new DataUtil<Motivo>();
-                    return helper.Sort(motivos, sortExpression);
-                } 
+                
                 return motivos;
             }
             catch (Exception)

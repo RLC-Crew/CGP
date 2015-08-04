@@ -7,7 +7,6 @@ using CGP.UsrPagos.Dat_PC_CentrosConcepto;
 using System.Data;
 using CGPWinWebLogica.Entidades.Enums;
 using System.ComponentModel;
-using Prosoft.WebControls_Library;
 using CGPWinWebLogica.Entidades.Seguridad;
 
 namespace CGPWinWebLogica.AccesoDatos.Transacciones

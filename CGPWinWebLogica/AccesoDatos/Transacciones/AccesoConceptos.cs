@@ -6,7 +6,6 @@ using CGP.UsrPagos.Dat_PC_Conceptos;
 using System.Data;
 using CGPWinWebLogica.Entidades.Enums;
 using System.ComponentModel;
-using Prosoft.WebControls_Library;
 using CGPWinWebLogica.Entidades.Transacciones;
 
 namespace CGPWinWebLogica.AccesoDatos.Transacciones
@@ -35,11 +34,7 @@ namespace CGPWinWebLogica.AccesoDatos.Transacciones
                         conceptos.Add(concep);
                     }
                 }
-                if (conceptos != null)
-                {
-                    DataUtil<Concepto> helper = new DataUtil<Concepto>();
-                    return helper.Sort(conceptos, sortExpression);
-                }
+               
                 return conceptos;
             }
             catch (Exception e)

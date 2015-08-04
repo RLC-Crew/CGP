@@ -6,7 +6,6 @@ using System.ComponentModel;
 using CGP.UsrPagos.Dat_PC_Servicios;
 using System.Data;
 using CGPWinWebLogica.Entidades.Parametros;
-using Prosoft.WebControls_Library;
 using CGPWinWebLogica.Entidades.Enums;
 using CGPWinWebLogica.Entidades.Seguridad;
 
@@ -78,11 +77,7 @@ namespace CGPWinWebLogica.AccesoDatos.Parametros
                         servicios.Add(nuevoServicio);
                     }
                 }
-                if (servicios != null)
-                {
-                    DataUtil<Servicio> helper = new DataUtil<Servicio>();
-                    return helper.Sort(servicios, sortExpression);
-                }
+                
                 return servicios;
             }
             catch (Exception e)

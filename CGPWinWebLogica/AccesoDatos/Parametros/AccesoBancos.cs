@@ -6,7 +6,6 @@ using CGP.UsrPagos.Dat_PC_Bancos;
 using System.Data;
 using System.ComponentModel;
 using CGPWinWebLogica.Entidades.Parametros;
-using Prosoft.WebControls_Library;
 using CGPWinWebLogica.Entidades.Enums;
 using CGPWinWebLogica.Entidades.Seguridad;
 
@@ -60,11 +59,7 @@ namespace CGPWinWebLogica.AccesoDatos.Parametros
                         bancos.Add(nuevoBanco);
                     }
                 }
-                if (bancos != null)
-                {
-                    DataUtil<Banco> helper = new DataUtil<Banco>();
-                    return helper.Sort(bancos, sortExpression);
-                }
+              
                 return bancos;
             }
             catch (Exception)

@@ -6,7 +6,6 @@ using CGP.Reportes.Pagos;
 using CGPWinWebLogica.Entidades.Transacciones;
 using CGPWinWebLogica.Entidades.Parametros;
 using CGPWinWebLogica.Entidades.Enums;
-using Prosoft.WebControls_Library;
 using CGPWinWebLogica.Entidades.Reportes;
 using CGPWinWebLogica.Entidades.Seguridad;
 using CGPWinWebLogica.AccesoDatos.Parametros;
@@ -42,11 +41,7 @@ namespace CGPWinWebLogica.AccesoDatos.Reportes
                         monedas.Add(nuevaMoneda);
                     }
                 }
-                if (monedas != null)
-                {
-                    DataUtil<Moneda> helper = new DataUtil<Moneda>();
-                    return helper.Sort(monedas, sortExpression);
-                }
+               
                 return monedas;
             }
             catch (Exception)
@@ -78,11 +73,7 @@ namespace CGPWinWebLogica.AccesoDatos.Reportes
                         motivos.Add(nuevoMotivo);
                     }
                 }
-                if (motivos != null)
-                {
-                    DataUtil<Motivo> helper = new DataUtil<Motivo>();
-                    return helper.Sort(motivos, sortExpression);
-                }
+                
                 return motivos;
             }
             catch (Exception)
@@ -119,11 +110,7 @@ namespace CGPWinWebLogica.AccesoDatos.Reportes
                         centros.Add(nuevoCentro);
                     }
                 }
-                if (centros != null)
-                {
-                    DataUtil<CentroCosto> helper = new DataUtil<CentroCosto>();
-                    return helper.Sort(centros, sortExpression);
-                }
+               
                 return centros;
             }
             catch (Exception)
@@ -155,11 +142,7 @@ namespace CGPWinWebLogica.AccesoDatos.Reportes
                         bancos.Add(nuevoBanco);
                     }
                 }
-                if (bancos != null)
-                {
-                    DataUtil<Banco> helper = new DataUtil<Banco>();
-                    return helper.Sort(bancos, sortExpression);
-                }
+               
                 return bancos;
             }
             catch (Exception)
@@ -197,11 +180,7 @@ namespace CGPWinWebLogica.AccesoDatos.Reportes
                         servicios.Add(nuevoServicio);
                     }
                 }
-                if (servicios != null)
-                {
-                    DataUtil<Servicio> helper = new DataUtil<Servicio>();
-                    return helper.Sort(servicios, sortExpression);
-                }
+               
                 return servicios;
             }
             catch (Exception)
@@ -233,11 +212,7 @@ namespace CGPWinWebLogica.AccesoDatos.Reportes
                         conceptos.Add(concepto);
                     }
                 }
-                if (conceptos != null)
-                {
-                    DataUtil<CGPWinWebLogica.Entidades.Transacciones.Concepto> helper = new DataUtil<CGPWinWebLogica.Entidades.Transacciones.Concepto>();
-                    return helper.Sort(conceptos, sortExpression);
-                }
+                
                 return conceptos;
             }
             catch (Exception)
@@ -271,11 +246,7 @@ namespace CGPWinWebLogica.AccesoDatos.Reportes
                     }
 
                 }
-                if (usuariosCentros != null)
-                {
-                    DataUtil<UsuarioCentroCosto> helper = new DataUtil<UsuarioCentroCosto>();
-                    return helper.Sort(usuariosCentros, sortExpression);
-                }
+               
                 return usuariosCentros;
             }
             catch (Exception)
@@ -327,11 +298,7 @@ namespace CGPWinWebLogica.AccesoDatos.Reportes
 
                                                         }).ToList();
                 }
-                if (transaccionesXPeriodo != null && transaccionesXPeriodo.Count > 0)
-                {
-                    DataUtil<TransaccionPeriodo> helper = new DataUtil<TransaccionPeriodo>();
-                    return helper.Sort(transaccionesXPeriodo, sortExpression);
-                }
+                
                 return transaccionesXPeriodo;
             }
             catch (Exception)
@@ -388,11 +355,7 @@ namespace CGPWinWebLogica.AccesoDatos.Reportes
                                                 IdCanal = row.IdCanal
                                             }).ToList();
                 }
-                if (transaccionesXNumero != null && transaccionesXNumero.Count > 0)
-                {
-                    DataUtil<TransaccionNumero> helper = new DataUtil<TransaccionNumero>();
-                    return helper.Sort(transaccionesXNumero, sortExpression);
-                }
+                
                 return transaccionesXNumero;
             }
             catch (Exception)
@@ -432,11 +395,7 @@ namespace CGPWinWebLogica.AccesoDatos.Reportes
 
                                                   }).ToList();
                 }
-                if (listaPropuestas != null && listaPropuestas.Count > 0)
-                {
-                    DataUtil<Propuesta> helper = new DataUtil<Propuesta>();
-                    return helper.Sort(listaPropuestas, sortExpression);
-                }
+                
                 return listaPropuestas;
             }
             catch (Exception)
@@ -484,11 +443,7 @@ namespace CGPWinWebLogica.AccesoDatos.Reportes
                                            CuentaCliente = row.CuentaCliente,
                                        }).ToList();
                 }
-                if (listaPropuestas != null && listaPropuestas.Count > 0)
-                {
-                    DataUtil<PropuestaDetallada> helper = new DataUtil<PropuestaDetallada>();
-                    return helper.Sort(listaPropuestas, sortExpression);
-                }
+               
                 return listaPropuestas;
             }
             catch (Exception)
@@ -536,11 +491,7 @@ namespace CGPWinWebLogica.AccesoDatos.Reportes
                                                   CuentaCliente = row.CuentaCliente
                                               }).ToList();
                 }
-                if (transaccionesEntidades != null && transaccionesEntidades.Count > 0)
-                {
-                    DataUtil<TransaccionEntidad> helper = new DataUtil<TransaccionEntidad>();
-                    return helper.Sort(transaccionesEntidades, sortExpression);
-                }
+               
                 return transaccionesEntidades;
             }
             catch (Exception)
@@ -589,11 +540,7 @@ namespace CGPWinWebLogica.AccesoDatos.Reportes
                                                   NombreCanal = row.NombreCanal
                                               }).ToList();
                 }
-                if (transaccionesEntidades != null && transaccionesEntidades.Count > 0)
-                {
-                    DataUtil<TransaccionEntidad> helper = new DataUtil<TransaccionEntidad>();
-                    return helper.Sort(transaccionesEntidades, sortExpression);
-                }
+               
                 return transaccionesEntidades;
             }
             catch (Exception)
@@ -642,11 +589,7 @@ namespace CGPWinWebLogica.AccesoDatos.Reportes
 
                                       }).ToList();
                 }
-                if (autorizaciones != null && autorizaciones.Count > 0)
-                {
-                    DataUtil<Entidades.Reportes.Autorizacion> helper = new DataUtil<Entidades.Reportes.Autorizacion>();
-                    return helper.Sort(autorizaciones, sortExpression);
-                }
+              
                 return autorizaciones;
             }
             catch (Exception)
@@ -700,11 +643,7 @@ namespace CGPWinWebLogica.AccesoDatos.Reportes
 
                                       }).ToList();
                 }
-                if (autorizaciones != null && autorizaciones.Count > 0)
-                {
-                    DataUtil<Entidades.Reportes.Autorizacion> helper = new DataUtil<Entidades.Reportes.Autorizacion>();
-                    return helper.Sort(autorizaciones, sortExpression);
-                }
+               
                 return autorizaciones;
             }
             catch (Exception)
@@ -737,11 +676,7 @@ namespace CGPWinWebLogica.AccesoDatos.Reportes
                                           TipoEvento = (EnumTipoEventoBitacora) row.TipoEvento,
                                       }).ToList();
                 }
-                if (listadoEventos != null && listadoEventos.Count > 0)
-                {
-                    DataUtil<Evento> helper = new DataUtil<Evento>();
-                    return helper.Sort(listadoEventos, sortExpression);
-                }
+               
                 return listadoEventos;
             }
             catch (Exception)
@@ -776,11 +711,7 @@ namespace CGPWinWebLogica.AccesoDatos.Reportes
                                           ReferenciaTecnica = row.ReferenciaTecnica
                                       }).ToList();
                 }
-                if (listadoEventos != null && listadoEventos.Count > 0)
-                {
-                    DataUtil<Evento> helper = new DataUtil<Evento>();
-                    return helper.Sort(listadoEventos, sortExpression);
-                }
+               
                 return listadoEventos;
             }
             catch (Exception)
@@ -814,11 +745,7 @@ namespace CGPWinWebLogica.AccesoDatos.Reportes
                                           TipoEvento = (EnumTipoEventoBitacora) row.TipoEvento,
                                       }).ToList();
                 }
-                if (listadoEventos != null && listadoEventos.Count > 0)
-                {
-                    DataUtil<Evento> helper = new DataUtil<Evento>();
-                    return helper.Sort(listadoEventos, sortExpression);
-                }
+               
                 return listadoEventos;
             }
             catch (Exception)
@@ -851,11 +778,7 @@ namespace CGPWinWebLogica.AccesoDatos.Reportes
                                           TipoEvento = (EnumTipoEventoBitacora) row.TipoEvento,
                                       }).ToList();
                 }
-                if (listadoEventos != null && listadoEventos.Count > 0)
-                {
-                    DataUtil<Evento> helper = new DataUtil<Evento>();
-                    return helper.Sort(listadoEventos, sortExpression);
-                } 
+               
                 return listadoEventos;
             }
             catch (Exception)
@@ -1047,11 +970,7 @@ namespace CGPWinWebLogica.AccesoDatos.Reportes
                 else {
                     resultado = ListarHistorico(fechaInicio, fechaFin, codigoEntidad, codigoServicio, modalidad, codigoMoneda, estado, codigoCanal, cuentaCliente, cuentaClienteOrigen, string.Empty, string.Empty);
                 }
-                if (resultado != null)
-                {
-                    DataUtil<HistoricoResumen> helper = new DataUtil<HistoricoResumen>();
-                    return helper.Sort(resultado, sortExpression);
-                }
+               
                 return resultado;
             }
             catch

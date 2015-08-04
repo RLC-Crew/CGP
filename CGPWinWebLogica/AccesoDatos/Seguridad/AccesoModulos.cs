@@ -6,7 +6,6 @@ using CGPWinWebLogica.Entidades.Seguridad;
 using System.Data;
 using CGPWinWebLogica.Entidades.Enums;
 using System.ComponentModel;
-using Prosoft.WebControls_Library;
 using CGP.Seguridad.UsrSeguridad.Dat_Modulos;
 
 namespace CGPWinWebLogica.AccesoDatos.Seguridad

@@ -6,7 +6,6 @@ using CGPWinWebLogica.Entidades.Seguridad;
 using CGPWinWebLogica.Entidades.Enums;
 using System.ComponentModel;
 using System.Data;
-using Prosoft.WebControls_Library;
 using CGP.Seguridad.UsrSeguridad.Dat_UsuariosRolesSistema;
 using CGPWinWebLogica.Entidades.Parametros;
 using CGP.UsrPagos.Dat_PC_UsuariosCentros;
@@ -77,11 +76,7 @@ namespace CGPWinWebLogica.AccesoDatos.Seguridad
                         lista.Add(obj);
                     }
                 }
-                if (lista != null)
-                {
-                    DataUtil<Usuario> helper = new DataUtil<Usuario>();
-                    return helper.Sort(lista, sortExpression);
-                }
+               
                 return lista;
             }
             catch (Exception)
