@@ -49,7 +49,7 @@
         {
             return this.View(HomeControllerAction.Contact);
         }
-
+       
         /// <summary>
         /// Gets the Atom 1.0 feed for the current site. Note that Atom 1.0 is used over RSS 2.0 because Atom 1.0 is a 
         /// newer and more well defined format. Atom 1.0 is a standard and RSS is not. See

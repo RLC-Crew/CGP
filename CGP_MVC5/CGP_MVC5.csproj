@@ -202,9 +202,12 @@
     <Content Include="Error\Forbidden.html" />
     <Content Include="Error\GatewayTimeout.html" />
     <Content Include="Error\ServiceUnavailable.html" />
+    <Compile Include="Controllers\SharedController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Entidades\Modulos.cs" />
+    <Compile Include="Models\Entidades\Opciones.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\Cache\CacheService.cs" />
     <Compile Include="Services\Cache\ICacheService.cs" />
@@ -432,6 +435,7 @@
     <Content Include="Views\Error\MethodNotAllowed.cshtml" />
     <Content Include="Views\Error\NotFound.cshtml" />
     <Content Include="Views\Error\Unauthorized.cshtml" />
+    <Content Include="Views\Shared\_MenuOpciones.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -440,6 +444,12 @@
     <Content Include="packages.config">
       <SubType>Designer</SubType>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CGPWinWebLogica\CGPWinWebLogica.csproj">
+      <Project>{265ec878-bf16-4c8f-8f81-3564b2f2b149}</Project>
+      <Name>CGPWinWebLogica</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

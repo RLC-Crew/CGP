@@ -14,5 +14,6 @@ namespace CGPWinWebLogica.Entidades.Seguridad
         public string Nombre { get; set; }
         public string Descripcion { get; set; }
         public EnumEstadosBase Estado { get; set; }
+        public List<Opcion> Opciones { get; set; }
     }
 }

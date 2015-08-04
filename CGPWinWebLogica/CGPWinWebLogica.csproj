@@ -89,6 +89,7 @@
     <Compile Include="AccesoDatos\Parametros\AccesoCanales.cs" />
     <Compile Include="AccesoDatos\Parametros\AccesoInactivacionServiciosEntidad.cs" />
     <Compile Include="AccesoDatos\Reportes\AccesoReportes.cs" />
+    <Compile Include="AccesoDatos\Seguridad\SeguridadOpciones.cs" />
     <Compile Include="AccesoDatos\Transacciones\AccesoCentroCostoConceptos.cs" />
     <Compile Include="AccesoDatos\Transacciones\AccesoConceptos.cs" />
     <Compile Include="AccesoDatos\Transacciones\AccesoDevoluciones.cs" />
@@ -229,6 +230,10 @@
     <ProjectReference Include="..\CGPWin_DatosClient\CGPWin_DatosClient.vbproj">
       <Project>{7683F130-78ED-40FB-AF07-D19E014CB2C0}</Project>
       <Name>CGPWin_DatosClient</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Seguridad\Seguridad.csproj">
+      <Project>{2c2bfea0-8714-4088-90c8-b91b7e8600cf}</Project>
+      <Name>Seguridad</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
