@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="AutenticaUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IP" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AutenticaUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AutenticaUserResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="obtenerDatosUsuario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="a_strLogin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IP" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="obtenerDatosUsuarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="obtenerDatosUsuarioResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="obtenerModulos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="a_strLogin" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="a_nSistema" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IP" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="obtenerModulosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="obtenerModulosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="obtenerOpciones">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="a_strLogin" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="a_nSistema" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="a_nModulo" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="a_nPadre" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IP" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="obtenerOpcionesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="obtenerOpcionesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CambiarContrasena">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="passViejo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="passNuevo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="User" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IP" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CambiarContrasenaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CambiarContrasenaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="AutenticaUserSoapIn">
+    <wsdl:part name="parameters" element="tns:AutenticaUser" />
+  </wsdl:message>
+  <wsdl:message name="AutenticaUserSoapOut">
+    <wsdl:part name="parameters" element="tns:AutenticaUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="obtenerDatosUsuarioSoapIn">
+    <wsdl:part name="parameters" element="tns:obtenerDatosUsuario" />
+  </wsdl:message>
+  <wsdl:message name="obtenerDatosUsuarioSoapOut">
+    <wsdl:part name="parameters" element="tns:obtenerDatosUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="obtenerModulosSoapIn">
+    <wsdl:part name="parameters" element="tns:obtenerModulos" />
+  </wsdl:message>
+  <wsdl:message name="obtenerModulosSoapOut">
+    <wsdl:part name="parameters" element="tns:obtenerModulosResponse" />
+  </wsdl:message>
+  <wsdl:message name="obtenerOpcionesSoapIn">
+    <wsdl:part name="parameters" element="tns:obtenerOpciones" />
+  </wsdl:message>
+  <wsdl:message name="obtenerOpcionesSoapOut">
+    <wsdl:part name="parameters" element="tns:obtenerOpcionesResponse" />
+  </wsdl:message>
+  <wsdl:message name="CambiarContrasenaSoapIn">
+    <wsdl:part name="parameters" element="tns:CambiarContrasena" />
+  </wsdl:message>
+  <wsdl:message name="CambiarContrasenaSoapOut">
+    <wsdl:part name="parameters" element="tns:CambiarContrasenaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SeguridadSoap">
+    <wsdl:operation name="AutenticaUser">
+      <wsdl:input message="tns:AutenticaUserSoapIn" />
+      <wsdl:output message="tns:AutenticaUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="obtenerDatosUsuario">
+      <wsdl:input message="tns:obtenerDatosUsuarioSoapIn" />
+      <wsdl:output message="tns:obtenerDatosUsuarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="obtenerModulos">
+      <wsdl:input message="tns:obtenerModulosSoapIn" />
+      <wsdl:output message="tns:obtenerModulosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="obtenerOpciones">
+      <wsdl:input message="tns:obtenerOpcionesSoapIn" />
+      <wsdl:output message="tns:obtenerOpcionesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CambiarContrasena">
+      <wsdl:input message="tns:CambiarContrasenaSoapIn" />
+      <wsdl:output message="tns:CambiarContrasenaSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SeguridadSoap" type="tns:SeguridadSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AutenticaUser">
+      <soap:operation soapAction="http://tempuri.org/AutenticaUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtenerDatosUsuario">
+      <soap:operation soapAction="http://tempuri.org/obtenerDatosUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtenerModulos">
+      <soap:operation soapAction="http://tempuri.org/obtenerModulos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtenerOpciones">
+      <soap:operation soapAction="http://tempuri.org/obtenerOpciones" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CambiarContrasena">
+      <soap:operation soapAction="http://tempuri.org/CambiarContrasena" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SeguridadSoap12" type="tns:SeguridadSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AutenticaUser">
+      <soap12:operation soapAction="http://tempuri.org/AutenticaUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtenerDatosUsuario">
+      <soap12:operation soapAction="http://tempuri.org/obtenerDatosUsuario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtenerModulos">
+      <soap12:operation soapAction="http://tempuri.org/obtenerModulos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtenerOpciones">
+      <soap12:operation soapAction="http://tempuri.org/obtenerOpciones" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CambiarContrasena">
+      <soap12:operation soapAction="http://tempuri.org/CambiarContrasena" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Seguridad">
+    <wsdl:port name="SeguridadSoap" binding="tns:SeguridadSoap">
+      <soap:address location="http://localhost:64953/CGPDatos/Seguridad.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SeguridadSoap12" binding="tns:SeguridadSoap12">
+      <soap12:address location="http://localhost:64953/CGPDatos/Seguridad.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

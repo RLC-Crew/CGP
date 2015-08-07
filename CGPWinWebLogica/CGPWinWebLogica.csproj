@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{265EC878-BF16-4C8F-8F81-3564B2F2B149}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CGPWinWebLogica</RootNamespace>
+    <AssemblyName>CGPWinWebLogica</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ObjetosBase">
+      <HintPath>..\DLLContiner\CGPWinWebLogica\ObjetosBase.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccesoDatos\Parametros\AccesoCanales.cs" />
+    <Compile Include="AccesoDatos\Parametros\AccesoInactivacionServiciosEntidad.cs" />
+    <Compile Include="AccesoDatos\Reportes\AccesoReportes.cs" />
+    <Compile Include="AccesoDatos\Seguridad\SeguridadOpciones.cs" />
+    <Compile Include="AccesoDatos\Transacciones\AccesoCentroCostoConceptos.cs" />
+    <Compile Include="AccesoDatos\Transacciones\AccesoConceptos.cs" />
+    <Compile Include="AccesoDatos\Transacciones\AccesoDevoluciones.cs" />
+    <Compile Include="AccesoDatos\Transacciones\AccesoDomiciliaciones.cs" />
+    <Compile Include="AccesoDatos\Transacciones\AccesoEntidadesConceptos.cs" />
+    <Compile Include="AccesoDatos\Transacciones\AccesoEnvios.cs" />
+    <Compile Include="AccesoDatos\Transacciones\AccessoTransacciones.cs" />
+    <Compile Include="AccesoDatos\Parametros\AccesoBancos.cs" />
+    <Compile Include="AccesoDatos\Parametros\AccesoCentrosCosto.cs" />
+    <Compile Include="AccesoDatos\Parametros\AccesoMonedas.cs" />
+    <Compile Include="AccesoDatos\Parametros\AccesoMotivos.cs" />
+    <Compile Include="AccesoDatos\Parametros\AccesoParametros.cs" />
+    <Compile Include="AccesoDatos\Parametros\AccesoServicios.cs" />
+    <Compile Include="AccesoDatos\Seguridad\AccesoDepartamentos.cs" />
+    <Compile Include="AccesoDatos\Seguridad\AccesoOpciones.cs" />
+    <Compile Include="AccesoDatos\Seguridad\AccesoPermisosTemporales.cs" />
+    <Compile Include="AccesoDatos\Seguridad\AccesoSeguridad.cs" />
+    <Compile Include="AccesoDatos\Seguridad\AccesoUsuarios.cs" />
+    <Compile Include="AccesoDatos\Seguridad\AccesoHorarios.cs" />
+    <Compile Include="AccesoDatos\Seguridad\AccesoBitacora.cs" />
+    <Compile Include="AccesoDatos\Seguridad\AccesoPerfiles.cs" />
+    <Compile Include="AccesoDatos\Seguridad\AccesoSistemas.cs" />
+    <Compile Include="AccesoDatos\Seguridad\AccesoModulos.cs" />
+    <Compile Include="AccesoDatos\Transacciones\AccesoLiquidaciones.cs" />
+    <Compile Include="Entidades\Enums\EnumEstadosDomiciliacion.cs" />
+    <Compile Include="Entidades\Enums\EnumEstadosTransaccionSI.cs" />
+    <Compile Include="Entidades\Enums\EnumEstadosTransaccionSinpe.cs" />
+    <Compile Include="Entidades\Enums\EnumTipoEventoBitacora.cs" />
+    <Compile Include="Entidades\Parametros\Canal.cs" />
+    <Compile Include="Entidades\Reportes\DetalleTransacciones.cs" />
+    <Compile Include="Entidades\Reportes\DetalleTransaccionesPorEnviio.cs" />
+    <Compile Include="Entidades\Reportes\ReporteADA.cs" />
+    <Compile Include="Entidades\Reportes\HistoricoDetalleADA.cs" />
+    <Compile Include="Entidades\Reportes\HistoricoResumenADA.cs" />
+    <Compile Include="Entidades\Reportes\HistoricoDetalle.cs" />
+    <Compile Include="Entidades\Reportes\Evento.cs" />
+    <Compile Include="Entidades\Reportes\HistoricoResumen.cs" />
+    <Compile Include="Entidades\Reportes\ReporteDevolucionesADA.cs" />
+    <Compile Include="Entidades\Reportes\ResumenTransacciones.cs" />
+    <Compile Include="Entidades\Seguridad\LineaBitacoraSeguridad.cs" />
+    <Compile Include="Entidades\Seguridad\UsuarioCentroC.cs" />
+    <Compile Include="Entidades\Transacciones\CentroCostoConcepto.cs" />
+    <Compile Include="Entidades\Transacciones\Concepto.cs" />
+    <Compile Include="Entidades\Transacciones\EntidadesConcepto.cs" />
+    <Compile Include="Entidades\Transacciones\Envio.cs" />
+    <Compile Include="Entidades\Transacciones\InformacionAdicional.cs" />
+    <Compile Include="Entidades\Transacciones\Transaccion.cs" />
+    <Compile Include="Entidades\Enums\EnumEstadosEnvios.cs" />
+    <Compile Include="Entidades\Enums\EnumEstadosTransaccionCGP.cs" />
+    <Compile Include="Entidades\Enums\EnumModalidades.cs" />
+    <Compile Include="Entidades\Enums\EnumEstadosUsuario.cs" />
+    <Compile Include="Entidades\Enums\EnumEstadosBase.cs" />
+    <Compile Include="Entidades\Enums\EnumMonedas.cs" />
+    <Compile Include="Entidades\Enums\EnumRespuestaCambioClave.cs" />
+    <Compile Include="Entidades\Enums\EnumServicios.cs" />
+    <Compile Include="Entidades\Enums\EnumTipoAccion.cs" />
+    <Compile Include="Entidades\Enums\EnumTipoMotivo.cs" />
+    <Compile Include="Entidades\Enums\EnumTiposOperacion.cs" />
+    <Compile Include="Entidades\Parametros\Banco.cs" />
+    <Compile Include="Entidades\Parametros\CentroCosto.cs" />
+    <Compile Include="Entidades\Parametros\Moneda.cs" />
+    <Compile Include="Entidades\Parametros\Motivo.cs" />
+    <Compile Include="Entidades\Parametros\Parametro.cs" />
+    <Compile Include="Entidades\Parametros\Servicio.cs" />
+    <Compile Include="Entidades\Parametros\ServiciosCentros.cs" />
+    <Compile Include="Entidades\Reportes\Autorizacion.cs" />
+    <Compile Include="Entidades\Reportes\Propuesta.cs" />
+    <Compile Include="Entidades\Reportes\PropuestaDetallada.cs" />
+    <Compile Include="Entidades\Reportes\TransaccionEntidad.cs" />
+    <Compile Include="Entidades\Reportes\TransaccionNumero.cs" />
+    <Compile Include="Entidades\Reportes\TransaccionPeriodo.cs" />
+    <Compile Include="Entidades\Reportes\UsuarioCentroCosto.cs" />
+    <Compile Include="Entidades\Seguridad\Modulo.cs" />
+    <Compile Include="Entidades\Seguridad\Opcion.cs" />
+    <Compile Include="Entidades\Seguridad\Perfil.cs" />
+    <Compile Include="Entidades\Seguridad\LineaBitacora.cs" />
+    <Compile Include="Entidades\Seguridad\Departamento.cs" />
+    <Compile Include="Entidades\Seguridad\Horario.cs" />
+    <Compile Include="Entidades\Seguridad\PermisoTemporal.cs" />
+    <Compile Include="Entidades\Seguridad\Sistema.cs" />
+    <Compile Include="Entidades\Transacciones\Conciliacion.cs" />
+    <Compile Include="Entidades\Transacciones\Liquidacion.cs" />
+    <Compile Include="Entidades\Transacciones\Devolucion.cs" />
+    <Compile Include="Entidades\Transacciones\TransaccionesInternas.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Entidades\Seguridad\Usuario.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="AccesoDatos\Seguridad.cs" />
+    <Compile Include="Utilidades\Utilidades.cs" />
+    <Compile Include="Web References\CGPDatosSeguridad\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://localhost:64953/CGPDatos/Seguridad.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\CGPDatosSeguridad\</RelPath>
+      <UpdateFromURL>http://localhost:64953/CGPDatos/Seguridad.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>CGPWinWebLogica_CGPDatosSeguridad_Seguridad</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\CGPDatosSeguridad\Seguridad.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\CGPDatosSeguridad\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\CGPDatosSeguridad\Seguridad.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CGPWin_DatosClient\CGPWin_DatosClient.vbproj">
+      <Project>{7683F130-78ED-40FB-AF07-D19E014CB2C0}</Project>
+      <Name>CGPWin_DatosClient</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Seguridad\Seguridad.csproj">
+      <Project>{2c2bfea0-8714-4088-90c8-b91b7e8600cf}</Project>
+      <Name>Seguridad</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
