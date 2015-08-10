@@ -27,13 +27,14 @@ namespace CGP_MVC5.Controllers
                 Modulos modulo = new Modulos();
                 modulo.IDModulo = m.Codigo;
                 modulo.Nombre = m.Nombre;
+                modulo.Estado = m.Estado;
                 modulo.Opciones = new List<Opciones>();
 
                 foreach (CGPWinWebLogica.Entidades.Seguridad.Opcion o in m.Opciones)
                 {
                     Opciones opc = new Opciones();
-                    opc.Nombre = o.NombreFisico;
-                    opc.Controller = o.NombreOpcion;
+                    opc.Nombre = o.NombreOpcion;
+                    opc.Controller = o.NombreFisico.Remove(o.NombreFisico.IndexOf(".aspx"));
                     opc.Imagen = o.RutaImagen;
                     modulo.Opciones.Add(opc);
                 }

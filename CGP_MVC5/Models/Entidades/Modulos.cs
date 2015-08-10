@@ -12,5 +12,7 @@ namespace CGPTheme.Models.Entidades
         public String Imagen { get; set; }
         public List<Opciones> Opciones { get; set; }
 
+
+        public CGPWinWebLogica.Entidades.Enums.EnumEstadosBase Estado { get; set; }
     }
 }

@@ -1,21 +1,21 @@
 ﻿
 <ul class="nav navbar-nav">
-    <li><a href="@Url.RouteUrl(HomeControllerRoute.GetAbout)"><span aria-hidden="true" class="fa fa-users"></span> About</a></li>
-    <li><a href="@Url.RouteUrl(HomeControllerRoute.GetContact)"><span aria-hidden="true" class="fa fa-phone"></span> Contact</a></li>
-    <li><a href="@Url.RouteUrl(HomeControllerRoute.GetFeed)"><span aria-hidden="true" class="fa fa-rss"></span> RSS</a></li>
+
     @if (HttpContext.Current.IsDebuggingEnabled)
     {
         // if <compilation debug="true"> is set in Web.config.
-        @foreach (var modulo in ViewBag.Modulos){
-        <li class="dropdown">
-            <a class="dropdown-toggle" role="button" aria-expanded="false" href="#" data-toggle="dropdown"><span aria-hidden="true" class="fa fa-cogs"></span> @modulo.Nombre <span aria-hidden="true" class="caret"></span></a>
-            <ul class="dropdown-menu" role="menu">
-                @foreach (var opcion in modulo.Opciones){
-                    <li><a href="/@ConfigurationManager.AppSettings["elmah.mvc.route"]"><span aria-hidden="true" class="fa fa-life-ring"></span> @opcion.Nombre</a></li>
-                }
-            </ul>
-        </li>
+        foreach (var modulo in ViewBag.Modulos)
+        {
+            <li class="dropdown">
+                <a class="dropdown-toggle" role="button" aria-expanded="false" href="#" data-toggle="dropdown"><span aria-hidden="true" class="fa fa-plus-square"></span> @modulo.Nombre <span aria-hidden="true" class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                    @foreach (var opcion in modulo.Opciones)
+                    {
+                        <li><a href="@Url.RouteUrl(HomeControllerRoute.GetIndex)"><span aria-hidden="true" class="fa fa-caret-square-o-right"></span> @opcion.Nombre</a></li>
+                    }
+                </ul>
+            </li>
+            
         }
     }
 </ul>
-  
