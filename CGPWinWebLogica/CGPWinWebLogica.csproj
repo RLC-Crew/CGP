@@ -58,8 +58,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CGPWin_DatosClient">
+      <HintPath>..\ContenedorDLL\DLL\CGPWin_DatosClient.dll</HintPath>
+    </Reference>
     <Reference Include="ObjetosBase">
-      <HintPath>..\DLLContiner\CGPWinWebLogica\ObjetosBase.dll</HintPath>
+      <HintPath>..\ContenedorDLL\DLL\ObjetosBase.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
@@ -223,10 +226,6 @@
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CGPWin_DatosClient\CGPWin_DatosClient.vbproj">
-      <Project>{7683F130-78ED-40FB-AF07-D19E014CB2C0}</Project>
-      <Name>CGPWin_DatosClient</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Seguridad\Seguridad.csproj">
       <Project>{2c2bfea0-8714-4088-90c8-b91b7e8600cf}</Project>
       <Name>Seguridad</Name>

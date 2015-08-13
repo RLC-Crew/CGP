@@ -48,9 +48,8 @@
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ObjetosBase, Version=1.2005.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\DLLContiner\CGPWinWebLogica\ObjetosBase.dll</HintPath>
+    <Reference Include="ObjetosBase">
+      <HintPath>..\ContenedorDLL\DLL\ObjetosBase.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />

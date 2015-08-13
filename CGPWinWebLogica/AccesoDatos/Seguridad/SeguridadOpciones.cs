@@ -15,9 +15,10 @@ namespace CGPWinWebLogica.AccesoDatos.Seguridad
         {
             Autenticacion.Seguridad acceso = new Autenticacion.Seguridad();
             DataSet Modulos;
-
-            Modulos = acceso.obtenerModulos("rahernandez", 1, "wvanegas", System.Web.HttpContext.Current.Request.UserHostAddress);
-
+            try
+            {
+                Modulos = acceso.obtenerModulos("rahernandez", 1, "wvanegas", System.Web.HttpContext.Current.Request.UserHostAddress);
+            
             List<Modulo> modulos = new List<Modulo>();
             foreach (DataRow row in Modulos.Tables["modulos"].Rows)
             {
@@ -31,6 +32,11 @@ namespace CGPWinWebLogica.AccesoDatos.Seguridad
                modulos.Add(modulo);
             }
             return modulos;
+            }
+            catch (Exception e)
+            {
+                throw new HttpException(404, "Servicio no encontrado");
+            }
         }
 
         private List<Opcion> AgregarOpciones( int IdModulo,int sistema)

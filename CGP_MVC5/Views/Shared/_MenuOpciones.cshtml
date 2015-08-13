@@ -11,7 +11,7 @@
                 <ul class="dropdown-menu" role="menu">
                     @foreach (var opcion in modulo.Opciones)
                     {
-                        <li><a href="@Url.RouteUrl(HomeControllerRoute.GetIndex)"><span aria-hidden="true" class="fa fa-caret-square-o-right"></span> @opcion.Nombre</a></li>
+                        <li><a href="@Url.RouteUrl(HomeControllerRoute.GetIndex)"><span aria-hidden="true" class="fa fa-caret-square-o-right"></span> @opcion.Controller</a></li>
                     }
                 </ul>
             </li>

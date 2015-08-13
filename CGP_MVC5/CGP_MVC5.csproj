@@ -197,12 +197,41 @@
     <Compile Include="Constants\ErrorController\ErrorControllerRoute.cs" />
     <Compile Include="Constants\HomeController\HomeControllerAction.cs" />
     <Compile Include="Constants\HomeController\HomeControllerRoute.cs" />
+    <Compile Include="Controllers\Consultas\ConsultasController.cs" />
+    <Compile Include="Controllers\Parametros\CentrosCostosController.cs" />
+    <Compile Include="Controllers\Parametros\EntidadesFinancierasController.cs" />
+    <Compile Include="Controllers\Parametros\InactividadServiciosEntidadController.cs" />
+    <Compile Include="Controllers\Parametros\MonedasController.cs" />
+    <Compile Include="Controllers\Parametros\MotivosController.cs" />
+    <Compile Include="Controllers\Parametros\ServiciosController.cs" />
+    <Compile Include="Controllers\Reportes\ReportesController.cs" />
+    <Compile Include="Controllers\Seguridad\DepartamentosController.cs" />
+    <Compile Include="Controllers\Seguridad\HorariosController.cs" />
+    <Compile Include="Controllers\Seguridad\PermisosTemporalesController.cs" />
+    <Compile Include="Controllers\Seguridad\UsuariosController.cs" />
+    <Compile Include="Controllers\TransaccionesCobros\AprobacionController.cs" />
+    <Compile Include="Controllers\TransaccionesCobros\AutorizacionController.cs" />
+    <Compile Include="Controllers\TransaccionesCobros\ConceptosController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Content Include="Error\Forbidden.html" />
     <Content Include="Error\GatewayTimeout.html" />
     <Content Include="Error\ServiceUnavailable.html" />
     <Compile Include="Controllers\SharedController.cs" />
+    <Compile Include="Controllers\TransaccionesCobros\EnviosADAsController.cs" />
+    <Compile Include="Controllers\TransaccionesCobros\EnviosController.cs" />
+    <Compile Include="Controllers\TransaccionesCobros\ImportacionResultadosADAsController.cs" />
+    <Compile Include="Controllers\TransaccionesCobros\ImportacionResultadosController.cs" />
+    <Compile Include="Controllers\TransaccionesCobros\LiquidacionController.cs" />
+    <Compile Include="Controllers\TransaccionesCobros\RegeneracionController.cs" />
+    <Compile Include="Controllers\TransaccionesPagos\AprobacionController.cs" />
+    <Compile Include="Controllers\TransaccionesPagos\AutorizacionController.cs" />
+    <Compile Include="Controllers\TransaccionesPagos\ConceptosController.cs" />
+    <Compile Include="Controllers\TransaccionesPagos\ConciliacionController.cs" />
+    <Compile Include="Controllers\TransaccionesPagos\EnviosController.cs" />
+    <Compile Include="Controllers\TransaccionesPagos\ImportacionResultadosController.cs" />
+    <Compile Include="Controllers\TransaccionesPagos\LiquidacionController.cs" />
+    <Compile Include="Controllers\TransaccionesPagos\RegeneracionController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -439,6 +468,28 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Aprobacion\" />
+    <Folder Include="Views\Autorizacion\" />
+    <Folder Include="Views\CentrosCostos\" />
+    <Folder Include="Views\Conceptos\" />
+    <Folder Include="Views\Conciliacion\" />
+    <Folder Include="Views\Consultas\" />
+    <Folder Include="Views\Departamentos\" />
+    <Folder Include="Views\EntidadesFinancieras\" />
+    <Folder Include="Views\EnviosADAs\" />
+    <Folder Include="Views\Envios\" />
+    <Folder Include="Views\Horarios\" />
+    <Folder Include="Views\ImportacionResultadosADAs\" />
+    <Folder Include="Views\ImportacionResultados\" />
+    <Folder Include="Views\InactividadServiciosEntidad\" />
+    <Folder Include="Views\Liquidacion\" />
+    <Folder Include="Views\Monedas\" />
+    <Folder Include="Views\Motivos\" />
+    <Folder Include="Views\PermisosTemporales\" />
+    <Folder Include="Views\Regeneracion\" />
+    <Folder Include="Views\Reportes\" />
+    <Folder Include="Views\Servicios\" />
+    <Folder Include="Views\Usuarios\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config">
