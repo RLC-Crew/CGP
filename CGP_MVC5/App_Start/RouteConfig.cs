@@ -41,8 +41,36 @@
                     url: "{controller}/{action}/{id}",
                     defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional });
 
-            
-                   
+            routes.MapRoute(
+                    name: "Transacciones",
+                    url: "Formularios/Transacciones/{controller}/{action}/{id}",
+                    defaults: new { controller = "Conceptos", action = "Index", id = UrlParameter.Optional });
+
+            routes.MapRoute(
+                    name: "Parametros",
+                    url: "Formularios/Parametros/{controller}/{action}/{id}",
+                    defaults: new { controller = "Monedas", action = "Index", id = UrlParameter.Optional });
+
+            routes.MapRoute(
+                    name: "Parametros",
+                    url: "Formularios/Parametros/{controller}/{action}/{id}",
+                    defaults: new { controller = "Monedas", action = "Index", id = UrlParameter.Optional });
+
+            routes.MapRoute(
+                    name: "Consultas",
+                    url: "Formularios/Consultas/{controller}/{action}/{id}",
+                    defaults: new { controller = "Consultas", action = "Index", id = UrlParameter.Optional });
+
+            routes.MapRoute(
+                    name: "Seguridad",
+                    url: "Formularios/Seguridad/{controller}/{action}/{id}",
+                    defaults: new { controller = "Departamentos", action = "Index", id = UrlParameter.Optional });
+
+            routes.MapRoute(
+                    name: "Reportes",
+                    url: "Reportes/{controller}/{action}/{id}",
+                    defaults: new { controller = "Reportes", action = "Index", id = UrlParameter.Optional });
+
         }
     }
 }
