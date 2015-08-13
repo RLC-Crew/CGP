@@ -3,5 +3,6 @@
     public class Application
     {
         public const string Name = "CGP WEB";
+        
     }
 }

@@ -465,6 +465,7 @@
     <Content Include="Views\Error\NotFound.cshtml" />
     <Content Include="Views\Error\Unauthorized.cshtml" />
     <Content Include="Views\Shared\_MenuOpciones.cshtml" />
+    <Content Include="Views\Reportes\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -487,7 +488,6 @@
     <Folder Include="Views\Motivos\" />
     <Folder Include="Views\PermisosTemporales\" />
     <Folder Include="Views\Regeneracion\" />
-    <Folder Include="Views\Reportes\" />
     <Folder Include="Views\Servicios\" />
     <Folder Include="Views\Usuarios\" />
   </ItemGroup>

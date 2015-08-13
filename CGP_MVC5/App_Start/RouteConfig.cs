@@ -61,10 +61,7 @@
                     url: "Formularios/Seguridad/{controller}/{action}/{id}",
                     defaults: new { controller = "Departamentos", action = "Index", id = UrlParameter.Optional });
 
-            routes.MapRoute(
-                    name: "Reportes",
-                    url: "Reportes/{controller}/{action}/{id}",
-                    defaults: new { controller = "Reportes", action = "Index", id = UrlParameter.Optional });
+            
 
         }
     }

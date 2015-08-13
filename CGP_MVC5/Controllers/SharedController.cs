@@ -11,6 +11,7 @@ namespace CGP_MVC5.Controllers
     public class SharedController : Controller
     {
         // GET: Shared
+        [ChildActionOnly]
         public ActionResult _MenuOpciones()
         {
             SeguridadOpciones acceso = new SeguridadOpciones();
