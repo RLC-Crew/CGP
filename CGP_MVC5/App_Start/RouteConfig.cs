@@ -50,12 +50,7 @@
                     name: "Parametros",
                     url: "Formularios/Parametros/{controller}/{action}/{id}",
                     defaults: new { controller = "Monedas", action = "Index", id = UrlParameter.Optional });
-
-            routes.MapRoute(
-                    name: "Parametros",
-                    url: "Formularios/Parametros/{controller}/{action}/{id}",
-                    defaults: new { controller = "Monedas", action = "Index", id = UrlParameter.Optional });
-
+            
             routes.MapRoute(
                     name: "Consultas",
                     url: "Formularios/Consultas/{controller}/{action}/{id}",
