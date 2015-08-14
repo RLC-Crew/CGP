@@ -168,7 +168,7 @@
                 <a class="navbar-brand" role="banner" href="@Url.RouteUrl(HomeControllerRoute.GetIndex)">@Application.Name</a>
             </div>
             <div class="navbar-collapse collapse">
-              @Html.Action("_MenuOpciones","Shared")
+              @*@Html.Action("_MenuOpciones","Shared")*@
                 <form action="@Url.RouteUrl(HomeControllerRoute.GetSearch)" class="navbar-form navbar-right" method="get" role="search">
                     <div class="input-group">
                         <input aria-label="Search" class="form-control" maxlength="2048" name="query" placeholder="Search" title="Search" type="text">

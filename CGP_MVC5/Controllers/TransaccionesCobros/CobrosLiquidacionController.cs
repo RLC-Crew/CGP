@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace CGP_MVC5.Controllers.TransaccionesCobros
 {
-    public class LiquidacionController : Controller
+    public class CobrosLiquidacionController : Controller
     {
         // GET: Liquidacion
         public ActionResult Index()

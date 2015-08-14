@@ -4,29 +4,29 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace CGP_MVC5.Controllers.TransaccionesCobros
+namespace CGP_MVC5.Controllers.TransaccionesPagos
 {
-    public class ConceptosController : Controller
+    public class PagosAprobacionController : Controller
     {
-        // GET: Conceptos
+        // GET: Aprobacion
         public ActionResult Index()
         {
             return View();
         }
 
-        // GET: Conceptos/Details/5
+        // GET: Aprobacion/Details/5
         public ActionResult Details(int id)
         {
             return View();
         }
 
-        // GET: Conceptos/Create
+        // GET: Aprobacion/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Conceptos/Create
+        // POST: Aprobacion/Create
         [HttpPost]
         public ActionResult Create(FormCollection collection)
         {
@@ -42,13 +42,13 @@ namespace CGP_MVC5.Controllers.TransaccionesCobros
             }
         }
 
-        // GET: Conceptos/Edit/5
+        // GET: Aprobacion/Edit/5
         public ActionResult Edit(int id)
         {
             return View();
         }
 
-        // POST: Conceptos/Edit/5
+        // POST: Aprobacion/Edit/5
         [HttpPost]
         public ActionResult Edit(int id, FormCollection collection)
         {
@@ -64,13 +64,13 @@ namespace CGP_MVC5.Controllers.TransaccionesCobros
             }
         }
 
-        // GET: Conceptos/Delete/5
+        // GET: Aprobacion/Delete/5
         public ActionResult Delete(int id)
         {
             return View();
         }
 
-        // POST: Conceptos/Delete/5
+        // POST: Aprobacion/Delete/5
         [HttpPost]
         public ActionResult Delete(int id, FormCollection collection)
         {

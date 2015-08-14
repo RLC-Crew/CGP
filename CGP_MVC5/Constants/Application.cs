@@ -2,7 +2,7 @@
 {
     public class Application
     {
-        public const string Name = "CGP WEB";
+        public const string Name = "CGP WEB 2.0";
         
     }
 }

@@ -44,7 +44,7 @@
             routes.MapRoute(
                     name: "Transacciones",
                     url: "Formularios/Transacciones/{controller}/{action}/{id}",
-                    defaults: new { controller = "Conceptos", action = "Index", id = UrlParameter.Optional });
+                    defaults: new { controller = "Aprobaciones", action = "Index", id = UrlParameter.Optional });
 
             routes.MapRoute(
                     name: "Parametros",
@@ -61,7 +61,11 @@
                     url: "Formularios/Seguridad/{controller}/{action}/{id}",
                     defaults: new { controller = "Departamentos", action = "Index", id = UrlParameter.Optional });
 
-            
+            routes.MapRoute(
+                    name: "Reportes",
+                    url: "Reportes/{controller}/{action}/{id}",
+                    defaults: new { controller = "Reportes", action = "Index", id = UrlParameter.Optional });
+
 
         }
     }

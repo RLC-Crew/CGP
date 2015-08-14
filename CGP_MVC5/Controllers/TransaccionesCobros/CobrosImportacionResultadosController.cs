@@ -4,29 +4,29 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace CGP_MVC5.Controllers.TransaccionesPagos
+namespace CGP_MVC5.Controllers.TransaccionesCobros
 {
-    public class EnviosController : Controller
+    public class CobrosImportacionResultadosController : Controller
     {
-        // GET: Envios
+        // GET: ImportacionResultados
         public ActionResult Index()
         {
             return View();
         }
 
-        // GET: Envios/Details/5
+        // GET: ImportacionResultados/Details/5
         public ActionResult Details(int id)
         {
             return View();
         }
 
-        // GET: Envios/Create
+        // GET: ImportacionResultados/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Envios/Create
+        // POST: ImportacionResultados/Create
         [HttpPost]
         public ActionResult Create(FormCollection collection)
         {
@@ -42,13 +42,13 @@ namespace CGP_MVC5.Controllers.TransaccionesPagos
             }
         }
 
-        // GET: Envios/Edit/5
+        // GET: ImportacionResultados/Edit/5
         public ActionResult Edit(int id)
         {
             return View();
         }
 
-        // POST: Envios/Edit/5
+        // POST: ImportacionResultados/Edit/5
         [HttpPost]
         public ActionResult Edit(int id, FormCollection collection)
         {
@@ -64,13 +64,13 @@ namespace CGP_MVC5.Controllers.TransaccionesPagos
             }
         }
 
-        // GET: Envios/Delete/5
+        // GET: ImportacionResultados/Delete/5
         public ActionResult Delete(int id)
         {
             return View();
         }
 
-        // POST: Envios/Delete/5
+        // POST: ImportacionResultados/Delete/5
         [HttpPost]
         public ActionResult Delete(int id, FormCollection collection)
         {

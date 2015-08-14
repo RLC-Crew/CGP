@@ -6,27 +6,27 @@ using System.Web.Mvc;
 
 namespace CGP_MVC5.Controllers.TransaccionesCobros
 {
-    public class AutorizacionController : Controller
+    public class CobrosImportacionResultadosADAsController : Controller
     {
-        // GET: Autorizacion
+        // GET: ImportacionResultadosADAs
         public ActionResult Index()
         {
             return View();
         }
 
-        // GET: Autorizacion/Details/5
+        // GET: ImportacionResultadosADAs/Details/5
         public ActionResult Details(int id)
         {
             return View();
         }
 
-        // GET: Autorizacion/Create
+        // GET: ImportacionResultadosADAs/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Autorizacion/Create
+        // POST: ImportacionResultadosADAs/Create
         [HttpPost]
         public ActionResult Create(FormCollection collection)
         {
@@ -42,13 +42,13 @@ namespace CGP_MVC5.Controllers.TransaccionesCobros
             }
         }
 
-        // GET: Autorizacion/Edit/5
+        // GET: ImportacionResultadosADAs/Edit/5
         public ActionResult Edit(int id)
         {
             return View();
         }
 
-        // POST: Autorizacion/Edit/5
+        // POST: ImportacionResultadosADAs/Edit/5
         [HttpPost]
         public ActionResult Edit(int id, FormCollection collection)
         {
@@ -64,13 +64,13 @@ namespace CGP_MVC5.Controllers.TransaccionesCobros
             }
         }
 
-        // GET: Autorizacion/Delete/5
+        // GET: ImportacionResultadosADAs/Delete/5
         public ActionResult Delete(int id)
         {
             return View();
         }
 
-        // POST: Autorizacion/Delete/5
+        // POST: ImportacionResultadosADAs/Delete/5
         [HttpPost]
         public ActionResult Delete(int id, FormCollection collection)
         {

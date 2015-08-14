@@ -6,27 +6,27 @@ using System.Web.Mvc;
 
 namespace CGP_MVC5.Controllers.TransaccionesPagos
 {
-    public class AutorizacionController : Controller
+    public class PagosConceptosController : Controller
     {
-        // GET: Autorizacion
+        // GET: Conceptos
         public ActionResult Index()
         {
             return View();
         }
 
-        // GET: Autorizacion/Details/5
+        // GET: Conceptos/Details/5
         public ActionResult Details(int id)
         {
             return View();
         }
 
-        // GET: Autorizacion/Create
+        // GET: Conceptos/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Autorizacion/Create
+        // POST: Conceptos/Create
         [HttpPost]
         public ActionResult Create(FormCollection collection)
         {
@@ -42,13 +42,13 @@ namespace CGP_MVC5.Controllers.TransaccionesPagos
             }
         }
 
-        // GET: Autorizacion/Edit/5
+        // GET: Conceptos/Edit/5
         public ActionResult Edit(int id)
         {
             return View();
         }
 
-        // POST: Autorizacion/Edit/5
+        // POST: Conceptos/Edit/5
         [HttpPost]
         public ActionResult Edit(int id, FormCollection collection)
         {
@@ -64,13 +64,13 @@ namespace CGP_MVC5.Controllers.TransaccionesPagos
             }
         }
 
-        // GET: Autorizacion/Delete/5
+        // GET: Conceptos/Delete/5
         public ActionResult Delete(int id)
         {
             return View();
         }
 
-        // POST: Autorizacion/Delete/5
+        // POST: Conceptos/Delete/5
         [HttpPost]
         public ActionResult Delete(int id, FormCollection collection)
         {

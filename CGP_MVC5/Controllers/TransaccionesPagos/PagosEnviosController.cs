@@ -6,27 +6,27 @@ using System.Web.Mvc;
 
 namespace CGP_MVC5.Controllers.TransaccionesPagos
 {
-    public class LiquidacionController : Controller
+    public class PagosEnviosController : Controller
     {
-        // GET: Liquidacion
+        // GET: Envios
         public ActionResult Index()
         {
             return View();
         }
 
-        // GET: Liquidacion/Details/5
+        // GET: Envios/Details/5
         public ActionResult Details(int id)
         {
             return View();
         }
 
-        // GET: Liquidacion/Create
+        // GET: Envios/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Liquidacion/Create
+        // POST: Envios/Create
         [HttpPost]
         public ActionResult Create(FormCollection collection)
         {
@@ -42,13 +42,13 @@ namespace CGP_MVC5.Controllers.TransaccionesPagos
             }
         }
 
-        // GET: Liquidacion/Edit/5
+        // GET: Envios/Edit/5
         public ActionResult Edit(int id)
         {
             return View();
         }
 
-        // POST: Liquidacion/Edit/5
+        // POST: Envios/Edit/5
         [HttpPost]
         public ActionResult Edit(int id, FormCollection collection)
         {
@@ -64,13 +64,13 @@ namespace CGP_MVC5.Controllers.TransaccionesPagos
             }
         }
 
-        // GET: Liquidacion/Delete/5
+        // GET: Envios/Delete/5
         public ActionResult Delete(int id)
         {
             return View();
         }
 
-        // POST: Liquidacion/Delete/5
+        // POST: Envios/Delete/5
         [HttpPost]
         public ActionResult Delete(int id, FormCollection collection)
         {

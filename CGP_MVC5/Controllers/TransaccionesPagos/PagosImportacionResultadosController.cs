@@ -4,9 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace CGP_MVC5.Controllers.TransaccionesCobros
+namespace CGP_MVC5.Controllers.TransaccionesPagos
 {
-    public class ImportacionResultadosController : Controller
+    public class PagosImportacionResultadosController : Controller
     {
         // GET: ImportacionResultados
         public ActionResult Index()
